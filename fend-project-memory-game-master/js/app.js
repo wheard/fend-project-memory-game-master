@@ -56,7 +56,6 @@ let numberOfStars = 3;
 
 function startNewGame() {
 	resetTimer();
-	timer.style.display = "none";
 	timeStart = false;
 	timer.textContent = minute + " minutes " + second + " seconds";
 	shuffle(card_deck); // use given shuffle function on card_deck
@@ -129,7 +128,7 @@ function addMove(card) {
 function gameOver() {
 	if (matches === 8) {
 		modal.style.display = "block";
-		modalText.textContent = "Congratulations! You earned " + numberOfStars + " stars!";
+		modalText.textContent = "Congratulations! You earned " + numberOfStars + " stars in " + timer;
 		startNewGame();
 		//resetTimer();
 	}

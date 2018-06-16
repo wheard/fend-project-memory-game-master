@@ -40,7 +40,7 @@ h1 {
 .deck {
     width: 660px;
     height: 680px;
-    background: linear-gradient(160deg, orange 0%, black 100%);
+    background: linear-gradient(160deg, #ff8c00 0%, black 100%);
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
@@ -68,7 +68,7 @@ h1 {
 
 .deck .card.open {
     transform: rotateY(0);
-    background: orange;
+    background: #ff8c00;
     cursor: default;
 }
 
@@ -137,4 +137,37 @@ h1 {
     float: right;
     font-size: 28px;
     font-weight: bold;
+}
+
+@media screen and (max-width: 449px) {
+  .deck {
+    width: 275px;
+    height: 275px;
+    background: #000080;
+  }
+  .deck .card {
+    width: 50px;
+    height: 50px;
+    background: #ff8c00;
+    color: #ff8c00;
+  }
+  .deck .card.open {
+    background: white;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 800px ) {
+  .deck {
+    width: 375px;
+    height: 375px;
+    background: red;
+  }
+  .deck .card {
+    width: 75px;
+    height: 75px;
+    background: white;
+  }
+  .deck .card.open {
+    background: black;
+  }
 }
